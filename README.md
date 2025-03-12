@@ -21,7 +21,7 @@ The program determines the best **trade routes** and **optimizes transactions** 
 
 ---
 
-### **1️⃣ Example Input Data**
+### **Example Input Data**
 
 The program operates using **structured input data**, which includes a **spatial network**, **supply and demand status**, **trader locations**, and **trader networks**.
 
@@ -29,7 +29,7 @@ Below is an example of how the input data is structured in `main.py`:
 
 ```python
 # Road network between locations
-spatial_network1 = [('L1', [('L4', 15), ('L2', 20)]), 
+spatial_network = [('L1', [('L4', 15), ('L2', 20)]), 
                     ('L2', [('L3', 10), ('L1', 20)]), 
                     ('L3', [('L2', 10)]), 
                     ('L4', [('L5', 5), ('L1', 15), ('L8', 20)]), 
@@ -39,13 +39,13 @@ spatial_network1 = [('L1', [('L4', 15), ('L2', 20)]),
                     ('L8', [('L4', 20), ('L5', 22)])]
 
 # Supply and demand of pottery at each location
-status1 = {'L1': 50, 'L2': -5, 'L4': -40, 'L3': 5, 'L5': 5, 'L8': 10, 'L6': 10, 'L7': -30}
+status = {'L1': 50, 'L2': -5, 'L4': -40, 'L3': 5, 'L5': 5, 'L8': 10, 'L6': 10, 'L7': -30}
 
 # Trader locations (each trader is assigned to a specific location)
-trader_locations1 = {'T1': 'L1', 'T2': 'L3', 'T3': 'L4', 'T4': 'L8', 'T5': 'L7', 'T6': 'L5'}
+trader_locations = {'T1': 'L1', 'T2': 'L3', 'T3': 'L4', 'T4': 'L8', 'T5': 'L7', 'T6': 'L5'}
 
 # Social network of traders (who can trade with whom)
-trader_network1 = [('T1', ['T2', 'T3']), 
+trader_network = [('T1', ['T2', 'T3']), 
                    ('T2', ['T1', 'T5']), 
                    ('T3', ['T1', 'T5', 'T6']), 
                    ('T5', ['T2', 'T3']),
